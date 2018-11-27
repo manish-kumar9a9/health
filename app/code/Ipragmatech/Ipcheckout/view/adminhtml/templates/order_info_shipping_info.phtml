@@ -1,0 +1,65 @@
+<?php  //echo json_encode($block->getData()) ?>
+<div id="max-id">
+    <strong><?php echo __('Max Id') ?>:</strong>
+    <span class="price"><?=$block->getMaxId() ?></span>
+</div>
+
+<div id="max-dob">
+    <strong><?php echo __('Date of Birth') ?>:</strong>
+    <span class="price">
+        <?php
+            if($block->getMaxDob()){
+                $dt = new DateTime($block->getMaxDob());
+                echo $dt->format('Y-m-d');
+            }
+
+        ?>
+        </span>
+</div>
+
+<div id="max-gender">
+    <strong><?php echo __('Gender') ?>:</strong>
+    <span class="price"><?php if($block->getMaxGender() == 1 || $block->getMaxGender() == '1'){ echo 'Male'; }else{'Female'; }  ?></span>
+</div>
+
+<div id="max-city">
+    <strong><?php echo __('City') ?>:</strong>
+    <span class="price"><?=$block->getMaxCityId() ?></span>
+</div>
+
+<div id="max-city-name">
+    <strong><?php echo __('City Name') ?>:</strong>
+    <span class="price"><?=$block->getMaxCityName() ?></span>
+</div>
+<div id="max-schedule-date">
+    <strong><?php echo __('Schedule Date') ?>:</strong>
+    <span class="price"><?=$block->getMaxScheduleDate() ?></span>
+</div>
+
+<div id="max-schedule">
+    <strong><?php echo __('Schedule Time') ?>:</strong>
+    <span class="price"><?=$block->getMaxSchedule() ?></span>
+</div>
+
+
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#max-id').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-dob').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-gender').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-city').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-city-name').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-schedule-date').detach();
+            $('.order-shipping-method').append(element);
+            var element = $('#max-schedule').detach();
+            $('.order-shipping-method').append(element);
+        }
+    );
+</script>

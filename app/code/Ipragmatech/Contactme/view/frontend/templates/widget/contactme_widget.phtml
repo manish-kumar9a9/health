@@ -1,0 +1,187 @@
+
+<?php
+/**
+ * MaxLab Infotech
+ * MaxLab Contact Form Widget Extension
+ *
+ * @category   MaxLab
+ * @package    MaxLab_Contactwidget
+ * @copyright  Copyright © 2006-2016 MaxLab (https://www.MaxLabinfotech.com)
+ * @license    https://www.MaxLabinfotech.com/magento-extension-license/
+ */
+//$widgetEnable = $this->getConfigValue('contactwidget_section/general/enable');
+$formActionUrl = $this->getFormActionUrl();
+$helper = $this->helper('Ipragmatech\Contactme\Helper\Data');
+$currPageUrl = $helper->getCurrentUrls();
+?>
+<style>
+form#contact-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.block-title {
+    font-weight: 600;
+    background: none;
+    font-size: 2.2rem !important;
+    padding-top: 20px;
+    color: white !important;
+    text-align: center;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    /* font-size: 30px; */
+    line-height: 40px;
+    position: relative;
+}
+.agreement lebel{
+  color: #FFFFFF:
+}
+.field.agreement {
+    display: flex;
+}
+.control-inner {
+    display: flex;
+}
+.phone-prefix {
+    display: inline-block;
+    background: white;
+    position: relative;
+    left: 0;
+    padding: 5px 0;
+    width: 13%;
+    text-align: center;
+    vertical-align: top;
+    margin-right: 5px;
+}
+label.agreement-lebel {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.fieldset{
+  margin-bottom: 0;
+}
+.contact-me-btn{
+  width: 100%;
+  background-color: #f47920;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+button.action.submit.primary.contact-me-btn {
+    background: #f47920;
+    border-color: #f47920;
+    color: #FFFFFF;
+}
+.submit-button-wrapper {
+    margin-bottom: 10px;
+        color: #FFFFFF;
+}
+.form .fieldset > .field {
+    margin: 0 0 10px;
+}
+
+/* for older chrome versions. may no longer apply. */
+/* ::-webkit-input-placeholder {
+    color: #FF0000;
+    opacity: 1 !important;
+} */
+
+/* Firefox 18- */
+/* :-moz-placeholder {
+    color: #FF0000;
+    opacity: 1 !important;
+} */
+
+ /* Firefox 19+ */
+/* ::-moz-placeholder {
+    color: #FF0000;
+    opacity: 1 !important;
+} */
+/*
+:-ms-input-placeholder {
+   color: #FF0000;
+} */
+</style>
+<div class="form-contactme">
+<?php if(true){?>
+<form class="form contact" action="<?php echo $formActionUrl;?>" id="contact-form" method="post" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>" data-mage-init='{"validation":{}}'>
+    <div class="block-title">GET LAB TEST AT HOME</div>
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <!-- <label class="label" for="name"><span><?php /* @escapeNotVerified */ echo __('Name') ?></span></label> -->
+            <div class="control">
+                <input placeholder="Full Name*"name="name" id="name" title="<?php /* @escapeNotVerified */ echo __('Name') ?>" required class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <!-- <label class="label" for="email"><span><?php /* @escapeNotVerified */ echo __('Email') ?></span></label> -->
+            <div class="control">
+                <input placeholder="E-mail*" name="email" id="email" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" class="input-text" type="email" required data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+
+        <div class="field telephone">
+            <!-- <label class="label" for="telephone"><span><?php /* @escapeNotVerified */ echo __('Phone Number') ?></span></label> -->
+
+            <div class="control">
+            <div class="control-inner">
+                <div class="phone-prefix">+91</div><input placeholder="Mobile Number*"name="telephone" id="telephone" title="<?php /* @escapeNotVerified */ echo __('Phone Number') ?>" value="" class="input-text" type="number" maxlength="10" data-validate="{required:true}"/>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="field package required">
+            <!-- <label class="label" for="comment"><span><?php /* @escapeNotVerified */ echo __('Enter Your Query') ?></span></label> -->
+            <div class="control">
+                <select required="required" class="input-text required" id="edit-submitted-profiles" name="packagename">
+                  <option value="" selected="selected">- Select -</option><option value="WWTP">WellWise Total Profile</option><option value="WWEP">WellWise Essential Profile</option><option value="WWAP">WellWise Advanced Profile</option>
+                  <option value="OTHERS">Some Other Test</option>
+                  <option value="MFPB">Max Fever Panel (Basic)</option><option value="MFPC">Max Fever Panel (Comprehensive)</option><option value="MDCP">Max Dengue/chikungunya Panel</option>
+                  </option><option value="CBC">CBC (Complete Blood Count)</option>
+                  <option value="MDP">Max Dengue Panel</option><option value="MCP">Max Chikungunya Panel</option><option value="MFP">Max Fever Panel (Fever &gt; 1 Week)</option><option value="MFPO">Max Fever Of Unknown Origin Panel (Fever &gt; 3 Weeks)</option><option value="MAWP">Max Adolescent Wellness Profile</option><option value="MBP">Max Bone Profile</option><option value="MCARP">Max Cardiac Profile</option>
+                  <option value="DSP">Diabetes Screening Profile</option><option value="DSP2">Diabetes Screening Profile 2</option><option value="MDP1">Max Diabetes Profile</option><option value="MDEP">Max Diabetes Extended Profile</option><option value="MNP">Max Nutrition Profile</option><option value="MEP">Max Electrolyte Panel</option><option value="MKHPC">Max Kidney Health Profile- Comprehensive</option>
+                  <option value="MCS">Max Cervical Screening</option>
+                  <option value="LP"> Lipid Profile</option><option value="LFT">Liver Function Test</option><option value="MVPB"> Max - Vitamine Panel (basic)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field query required">
+            <div class="control">
+                <textarea name="query" class="input-text" placeholder="Enter Your Query" id="query" title="<?php /* @escapeNotVerified */ echo __('Enter Your Query') ?>" class="input-text" cols="1" rows="2" data-validate="{required:false}"></textarea>
+              </div>
+        </div>
+
+        <div class="field agreement">
+           <input required="required" type="checkbox" id="submitted_agreement" name="submitted_agreement" value="Message" class="input-text">
+           <label class="agreement-lebel" for="submitted_agreement">I authorize Max Lab representative to contact me. I understand that this will override the DND status on my mobile number.* </label>
+        </div>
+
+
+    </fieldset>
+    <div class="submit-button-wrapper">
+        <input type="hidden" name="currUrl" id="currUrl" value="<?php echo $currPageUrl; ?>" />
+        <button type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class=" submit btn contact-me-btn">
+            <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
+        </button>
+    </div>
+</form>
+<?php
+}
+?>
+</div>

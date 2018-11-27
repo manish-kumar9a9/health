@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="FME_Contactus::css/fme_contactus.css" />
+		<!--<script src="FME_Contactus::js/contactus.js" /> -->
+		<script src="https://www.google.com/recaptcha/api.js" src_type="url" />
+	</head>
+<body>
+    <referenceBlock name="after.body.start">
+        <block class="FME\Contactus\Block\Contactblock" name="popup" after="-" template="FME_Contactus::popup.phtml"/>
+
+    
+    </referenceBlock>
+
+    <referenceBlock name="contact-us-link" remove="true"/>
+
+    <referenceBlock name="footer_links" >
+    	
+    		
+    	
+        <block class="Magento\Framework\View\Element\Html\Link\Current" name="contact-us-link2">
+            <arguments>
+                <argument name="label" xsi:type="string">Contact Us</argument>
+                <!--<argument name="path" xsi:type="string">contactus/front/index</argument> -->
+                <argument name="path" xsi:type="helper" helper="FME\Contactus\Helper\Data::getFrontName"/>
+            </arguments>
+
+            
+        </block>
+    </referenceBlock>
+
+    
+</body> 
+</page>

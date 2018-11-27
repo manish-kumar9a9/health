@@ -1,0 +1,169 @@
+/* line 3, ../sass/max-labs.scss */
+.node-type-ct-speciality-campaign-india .campaign-banner .campaign-webform {
+  top: 0px !important;
+  background: #57b38f !important;
+}
+/* line 6, ../sass/max-labs.scss */
+.node-type-ct-speciality-campaign-india .campaign-banner .campaign-webform .webform-component--form-message {
+  text-align: left;
+}
+/* line 9, ../sass/max-labs.scss */
+.node-type-ct-speciality-campaign-india .campaign-banner .campaign-webform .webform-component--form-message .form-item-submitted-form-message-Message label {
+  color: white;
+}
+/* line 14, ../sass/max-labs.scss */
+.node-type-ct-speciality-campaign-india .campaign-banner .campaign-webform .webform-submit {
+  background: #F47920;
+  border: none;
+}
+/* line 17, ../sass/max-labs.scss */
+.node-type-ct-speciality-campaign-india .campaign-banner .campaign-webform .webform-submit span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* line 25, ../sass/max-labs.scss */
+#wellness-packages .content_section, #choose-max-lab .content_section {
+  background: #f7f7f7;
+}
+/* line 28, ../sass/max-labs.scss */
+#wellness-packages .op, #choose-max-lab .op {
+  background: #fcfbe0;
+  color: #ff5900;
+  font-weight: bold;
+  box-shadow: 2px 2px 1px #ccc;
+  font-size: 16px;
+}
+/* line 35, ../sass/max-labs.scss */
+#wellness-packages .ptable, #choose-max-lab .ptable {
+  padding: 0 10px;
+}
+/* line 37, ../sass/max-labs.scss */
+#wellness-packages .ptable .ptable-container, #choose-max-lab .ptable .ptable-container {
+  background: #0e2954;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+/* line 45, ../sass/max-labs.scss */
+#wellness-packages .ptable h5, #choose-max-lab .ptable h5 {
+  margin: 10px auto;
+  color: #80ffb0;
+  font-size: 15px;
+  height: 45px;
+  vertical-align: middle;
+  display: table-cell;
+  text-transform: capitalize;
+}
+/* line 55, ../sass/max-labs.scss */
+#wellness-packages .ltable, #choose-max-lab .ltable {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 59, ../sass/max-labs.scss */
+#wellness-packages .ltable td:nth-child(2n), #choose-max-lab .ltable td:nth-child(2n) {
+  text-align: center;
+}
+/* line 62, ../sass/max-labs.scss */
+#wellness-packages .col-max-12.tests, #choose-max-lab .col-max-12.tests {
+  text-align: left;
+  height: 200px;
+  overflow: auto;
+  font-size: smaller;
+  border-bottom: 1px solid #eee;
+}
+/* line 70, ../sass/max-labs.scss */
+#wellness-packages .max-book, #choose-max-lab .max-book {
+  color: #fff;
+  background: #ff5900;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 9px auto 9px auto;
+  font-size: 15px;
+  display: block;
+}
+/* line 82, ../sass/max-labs.scss */
+#wellness-packages .lp_container, #choose-max-lab .lp_container {
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 90, ../sass/max-labs.scss */
+#wellness-packages .sec_content, #choose-max-lab .sec_content {
+  padding: 15px;
+  font-family: 'Gudea', sans-serif;
+}
+/* line 94, ../sass/max-labs.scss */
+#wellness-packages .max-heading, #choose-max-lab .max-heading {
+  color: #ff5900;
+  text-align: center;
+  margin: 20px;
+  font-size: 25px;
+}
+/* line 100, ../sass/max-labs.scss */
+#wellness-packages .max-heading::after, #choose-max-lab .max-heading::after {
+  content: "";
+  display: block;
+  background: url(../../images/icon_images/dark-sprite.png) scroll no-repeat center center;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-size: 100px;
+  margin-top: 10px;
+}
+/* line 110, ../sass/max-labs.scss */
+#wellness-packages .footer_content, #choose-max-lab .footer_content {
+  background: #fcfbe0;
+  padding: 15px;
+}
+/* line 113, ../sass/max-labs.scss */
+#wellness-packages .footer_content .why-lab .box, #choose-max-lab .footer_content .why-lab .box {
+  margin-bottom: 20px;
+}
+/* line 116, ../sass/max-labs.scss */
+#wellness-packages .footer_content .why-lab .icon, #choose-max-lab .footer_content .why-lab .icon {
+  width: 70px;
+  float: left;
+}
+/* line 120, ../sass/max-labs.scss */
+#wellness-packages .footer_content .why-lab p, #choose-max-lab .footer_content .why-lab p {
+  color: #173d6c;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* line 128, ../sass/max-labs.scss */
+.col-max-4 {
+  width: 33.33333333%;
+  float: left;
+}
+@media only screen and (max-width: 450px) {
+  /* line 128, ../sass/max-labs.scss */
+  .col-max-4 {
+    width: 100%;
+  }
+}
+
+/* line 136, ../sass/max-labs.scss */
+.col-max-12 {
+  width: 100%;
+  float: left;
+}
+
+/* line 143, ../sass/max-labs.scss */
+.page-node-thank-you #block-system-main .max-labs-thank-you-page a {
+  font-size: 1.2rem;
+}
+/* line 146, ../sass/max-labs.scss */
+.page-node-thank-you #block-system-main .max-labs-thank-you-page a:hover {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=max-labs.css.map */

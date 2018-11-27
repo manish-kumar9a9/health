@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+
+
+
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        
+        <update id="FME_Extensions::fmeextensions" title="FME Extensions" module="Magento_Backend" sortOrder="300" resource="FME_Extensions::fmeextensions"/>
+        <add id="FME_Contactus::contactus_main" title="ContactUs" module="FME_Contactus" sortOrder="11" parent="FME_Extensions::fmeextensions" resource="FME_Contactus::contactus_main"/>
+
+        <add id="FME_Contactus::Contactus" title="Manage Submissions" module="FME_Contactus" sortOrder="50" parent="FME_Contactus::contactus_main" action="contactus/index/index" resource="FME_Contactus::contactus"/>
+        
+    </menu>
+</config>

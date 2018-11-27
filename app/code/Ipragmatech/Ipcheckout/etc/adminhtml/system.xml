@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+       <tab id="ipragmatech" translate="label" sortOrder="10">
+            <label>Ipragmatech</label>
+       </tab>
+       <section id="twiliosetting" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Twilio Setting</label>
+            <tab>ipragmatech</tab>
+            <resource>Ipragmatech_Ipcheckout::config_twiliosetting</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Account Configuration</label>
+                <field id="account_sid" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Account Sid</label>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="auth_token" translate="label" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auth Token</label>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="twilio_number" translate="label" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twilio Number</label>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

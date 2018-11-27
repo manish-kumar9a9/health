@@ -1,0 +1,31 @@
+/* for mobile menu scroll*/
+@media only screen and (max-height: 500px){
+.nav-sections-item-content {
+    max-height: 375px;
+    overflow: scroll;
+    overflow-y: scroll;
+
+}
+}
+@media only screen and (max-height: 640px){
+.nav-sections-item-content {
+    max-height: 515px;
+    overflow: scroll;
+    overflow-y: scroll;
+
+}
+}
+@media only screen and (max-height: 700px){
+.nav-sections-item-content {
+    max-height: 575px;
+    overflow: scroll;
+    overflow-y: scroll;
+}
+}
+@media only screen and (max-height: 1024px){
+.nav-sections-item-content {
+    max-height: 768px;
+    overflow: scroll;
+    overflow-y: scroll;
+}
+}

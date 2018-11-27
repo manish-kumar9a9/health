@@ -1,0 +1,3226 @@
+<?php
+/**
+ * Copyright © 2015 ipragmatechcommerce. All rights reserved.
+ */
+?>
+<?php
+/**
+ * {{controller}} {{action}} template
+ *
+ * @var $block \Ipragmatech\Contactme\Block\Index\Index
+ */
+
+//https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=product-list-carousel-for-ecommerce-website
+?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://www.maxhealthcare.in/sites/all/themes/sub/max_theme/css/max-labs.css">
+<link rel="stylesheet" href="https://www.maxhealthcare.in/sites/all/themes/sub/max_theme/css/campaign.css"> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+  .page-wrapper{
+    min-width: 100%;
+  }
+  .page-main{
+    min-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container{
+      min-width: 100%;
+  }
+  header.navbar {
+    border: 0 none;
+    box-shadow: 0 0 7px 0 #999;
+  }
+  header#navbar.navbar-default {
+    background-color: #FFFFFF;
+    min-height: 84px;
+    z-index: 99;
+
+  }
+  .navbar-header.header-scroll-logo {
+    padding: 11px 0px;
+    width: 100%;
+  }
+  header#navbar {
+    padding-left: 0px;
+  }
+  .logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+    float: left;
+  }
+  .contectme-widget{
+    max-width: 300px;
+  }
+  .campaign-webform {
+    z-index: inherit;
+    right: 26px;
+    height: auto;
+    top: 26px;
+    max-width: 300px;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 10px;
+    top: 0 !important;
+    background: #57b38f !important;
+    border: 1px solid #EEE;
+}
+
+/* .contectme-widget-wrapper {
+    position: relative;
+    top: -520px;
+    float: right;
+    margin-right: 25px;
+} */
+.contectme-widget-wrapper {
+    position: absolute;
+    top: 84px; */
+    /* float: right; */
+    margin-right: 25px;
+    /* float: left; */
+    z-index: 90;
+    margin-left: 75%;
+}
+.slider {
+    position: relative;
+}
+#campaign-top-navigation #ortho-elite-appoint-number .appointment-number span {
+    font-size: 1.5rem;
+    color: #F47920;
+}
+#campaign-top-navigation #ortho-elite-appoint-number {
+    padding: 25px 30px 0 0;
+}
+#campaign-top-navigation #ortho-elite-appoint-number .appointment-number {
+    color: #626161;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+<script>
+var j = jQuery.noConflict();
+jwindow =j(window);
+jwindow.scroll(function() {
+  jscroll_position = jwindow.scrollTop();
+    if (jscroll_position > 250) { // if body is scrolled down by 300 pixels
+        j('#navbar').addClass('sticky');
+
+        // to get rid of jerk
+        header_height = j('#navbar').innerHeight();
+       j('body').css('padding-top' , header_height);
+    } else {
+        j('body').css('padding-top' , '0');
+        j('#navbar').removeClass('sticky');
+    }
+ });
+</script>
+<header id="navbar" role="banner" class="navbar navbar-default">
+<div class="container">
+    <div class="navbar-header header-scroll-logo">
+      <div class="logo-wrapper">
+        <a class="logo navbar-btn pull-left" href="#" title="Home">
+          <img src="https://www.maxlab.co.in/pub/media/logo/websites/1/logo.png" alt="Max Lab" width="196" height="42">
+        </a>
+      </strong>
+  </div>
+  <div id="campaign-top-navigation">
+      <div class="region region-campaign-top-navigation">
+        <section id="ortho-elite-appoint-number" class="block block-block clearfix">
+          <div class="appointment-number">
+            <p>Call us at <span>+91 9268 880 606</span></p>
+          </div>
+        </section> <!-- /.block -->
+      </div>
+    </div>
+</div>
+</header>
+<div class="slider-form-wrapper">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Menu -->
+      <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+          <li data-target="#carousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Items -->
+      <div class="carousel-inner">
+
+          <div class="item active">
+
+              <img src='<?php echo $this->getViewFileUrl('images/slider/slider1.jpg'); ?>' alt="Slide 1" />
+              <!-- <img src='https://www.maxhealthcare.in/sites/default/files/styles/speciality_campaign_1500_x_600/public/MHC_18_0.jpg' alt="Slide 1" /> -->
+          </div>
+          <div class="item">
+              <img src='<?php echo $this->getViewFileUrl('images/slider/slider2.jpg'); ?>' alt="Slide 2" />
+              <!-- <img src='https://www.maxhealthcare.in/sites/default/files/styles/speciality_campaign_1500_x_600/public/max%20banner%20re%20arrange%20text-04.jpg' alt="Slide 2" /> -->
+          </div>
+          <div class="item">
+              <img src='<?php echo $this->getViewFileUrl('images/slider/slider3.jpg'); ?>' alt="Slide 3" />
+              <!-- <img src='https://www.maxhealthcare.in/sites/default/files/styles/speciality_campaign_1500_x_600/public/max%20banner%20re%20arrange%20text-03.jpg' alt="Slide 3" /> -->
+          </div>
+          <div class="item">
+              <img src='<?php echo $this->getViewFileUrl('images/slider/slider4.jpg'); ?>' alt="Slide 3" />
+              <!-- <img src='https://www.maxhealthcare.in/sites/default/files/styles/speciality_campaign_1500_x_600/public/max%20banner%20re%20arrange%20text-02_0.jpg' alt="Slide 3" /> -->
+          </div>
+      </div>
+      <a href="#carousel" class="left carousel-control" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a href="#carousel" class="right carousel-control" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+  </div>
+  <!-- <div class="slider">
+  <?php
+      // echo $block->getLayout()
+      //            ->createBlock('Magento\Cms\Block\Block')
+      //            ->setBlockId('block_home1_slide')->toHtml();
+      //            ?>
+  </div> -->
+
+  <div class="contectme-widget-wrapper">
+    <div class="contectme-widget campaign-webform">
+      <?php echo $this->getLayout()->createBlock("Ipragmatech\Contactme\Block\Widget\Contactme")
+                      ->setDisplayType("contactme")
+                      ->setTemplate("widget/contactme_widget.phtml")
+                      ->toHtml(); ?>
+    </div>
+  </div>
+</div>
+
+
+<style>
+.carousel {
+    height: 500px;
+    margin-top: -20px;
+}
+/* Since positioning the image, we need to help out the caption */
+ .carousel-caption {
+    z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+ .carousel .item {
+    width: 100%;
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+      height: 500px;
+}
+.carousel-indicators .active{
+  background-color: black;
+}
+.owl-item {
+  min-width: 285px !important;
+}
+#top-wellness {
+
+    width: 75%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+}
+@media (max-width: 767px)
+{
+  .carousel {
+    height: 200px;
+  }
+  .carousel .item {
+    height: 200px;
+  }
+  .carousel-inner > .item > img {
+    height: 200px;
+  }
+  .navbar-header.header-scroll-logo {
+    padding: 0px 0px;
+    }
+    .logo {
+      min-width: 160px;
+      max-width: 160px;
+      margin-left: 0px;
+    }
+  .logo-wrapper {
+    width: 200px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+  }
+  .contectme-widget-wrapper {
+    position: relative;
+    top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .campaign-webform{
+    margin-right: 0;
+  }
+  .contectme-widget {
+    max-width: 100%;
+  }
+  .col-max-4 {
+    width: 50%;
+  }
+  .owl-item {
+    min-width: 285px !important;
+  }
+  #top-wellness{
+    width: 100%;
+  }
+  #wellness-packages .sec_content, #choose-max-lab .sec_content{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #wellness-packages .lp_container, #choose-max-lab .lp_container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .ptable{width:90%;margin:0 5%;}
+
+
+}
+@media (max-width: 500px)
+{
+  .col-max-4 {
+    width: 100%;
+  }
+}
+</style>
+<script type="text/javascript">
+var jc = jQuery.noConflict();
+jc(document).ready(function(){
+     jc("#carousel").carousel();
+
+     jc(".max-book").click(function() {
+         //console.log(jc("#name"));
+         jc("#name").blur();
+        jc("#name").focus();
+    });
+});
+</script>
+
+<script type="text/javascript">
+var jco = jQuery.noConflict();
+jco(document).ready(function() {
+  var owl = jco("#owl-demo");
+  owl.owlCarousel({
+  autoPlay: 2000,
+  loop : true,
+  rewind : false,
+  items : 4, //10 items above 1000px browser width
+  itemsDesktop : [1000,4], //5 items between 1000px and 901px
+  itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+  itemsTablet: [600,2], //2 items between 600 and 0;
+  itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+  pagination:false
+  });
+  jco(".next").click(function(){
+      owl.trigger('owl.next');
+  })
+  jco(".prev").click(function(){
+      owl.trigger('owl.prev');
+  });
+
+    var owl2 = jco("#owl-demo2");
+    owl2.owlCarousel({
+    autoPlay: 2000,
+    loop : true,
+    rewind : false,
+    items : 4, //10 items above 1000px browser width
+    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+    itemsTablet: [600,2], //2 items between 600 and 0;
+    itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+    pagination:false
+    });
+    jco(".next2").click(function(){
+        owl2.trigger('owl.next');
+    })
+    jco(".prev2").click(function(){
+        owl2.trigger('owl.prev');
+    });
+
+    var owl3 = jco("#owl-demo3");
+    owl3.owlCarousel({
+    autoPlay: false,
+    items : 3, //10 items above 1000px browser width
+    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,1], // 3 items betweem 900px and 601px
+    itemsTablet: [600,2], //2 items between 600 and 0;
+    itemsMobile : [479,1],// itemsMobile disabled - inherit from itemsTablet option
+    singleItem : false,
+    pagination:true
+    });
+    jco(".next3").click(function(){
+        owl3.trigger('owl.next');
+    })
+    jco(".prev3").click(function(){
+        owl3.trigger('owl.prev');
+    })
+
+});
+</script>
+<section id="wellness-packages" class="block block-block clearfix">
+	<section class="content_section clearfix">
+		<div class="lp_container">
+			<div class="col-max-12 sec_content">
+				<h2 class="max-heading">Best Selling Wellness Packages</h2>
+				<div id="top-wellness" class="">
+					<div aria-live="polite" class="slide-list">
+						<div id="owl-demo3" class="owl-carousel" style="">
+							<div class=" item col-max-11 ptable ">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>WellWise Total Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2999</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.7199</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>General Infection</td>
+													<td>Parameters</td>
+												</tr>
+												<tr>
+													<td>Complete Heamogram, PS &amp; ESR</td>
+													<td>16</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+													<td>19</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Diabetes </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting,Fluoride Plasma</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin (HbA1C),EDTA</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Kidney </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Creatinine, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Urea, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Sodium, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Potassium, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Chloride, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Bicarbonate, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Liver </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Total Proteins with Albumin,Globulin, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Bilirubin Total and Direct</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>BUN,Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Gamma GT,Serum</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Heart </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Cholesterol Total</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>VLDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>HDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>LDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Cholesterol/ HDL Ratio</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Triglycerides, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Nerve </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Vitamin B12, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Bone Health </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Inorganic Phosphorus</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Thyroid </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Free T3</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>FreeT4</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>TSH</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Total</td>
+													<td>63</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MTWP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable ">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>WellWise Advance Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1820</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.4240</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>General Infection</td>
+													<td>Parameters</td>
+												</tr>
+												<tr>
+													<td>Complete Heamogram, PS &amp; ESR</td>
+													<td>16</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+													<td>19</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Diabetes </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting,Fluoride Plasma</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin (HbA1C),EDTA</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Kidney </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Creatinine, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Urea, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Sodium, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Potassium, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Chloride, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Bicarbonate, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Liver </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Total Proteins with Albumin,Globulin, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Bilirubin Total and Direct</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>BUN,Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Gamma GT,Serum</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Heart </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Cholesterol Total</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>VLDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>HDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>LDL</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Cholesterol/ HDL Ratio</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Triglycerides, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Thyroid </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Free T3</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>FreeT4</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>TSH</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Total</td>
+													<td>60</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MGWP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>WellWise Essential Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1100</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2620</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>General Infection</td>
+													<td>Parameters</td>
+												</tr>
+												<tr>
+													<td>CBC (Complete Blood Count),EDTA</td>
+													<td>14	</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+													<td>19</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Diabetes </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting,Fluoride Plasma</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin (HbA1C),EDTA</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Kidney </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Creatinine, Serum
+</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Urea, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Liver </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Bilirubin Total and Direct</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Heart </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Cholesterol Total</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Triglycerides, Serum</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Thyroid </td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>TSH</td>
+													<td>1</td>
+												</tr>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Total</td>
+													<td>43</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MBWP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Other Wellness Packages -->
+		<div class="lp_container">
+			<div class="col-max-12 sec_content">
+				<h2 class="max-heading">Other Wellness Profiles</h2>
+				<div class="" role="toolbar">
+					<div aria-live="polite" class="slick-list">
+						<div id="owl-demo" class="owl-carousel" style="" >
+							<div class="item col-max-11 ptable  " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Cervical Screening</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1800</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3150</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Thin Prep/Sure Path Cytology</td>
+												</tr>
+												<tr>
+													<td>HPV DNA High Risk, Hybrid Capture (Automated)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCS" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Lipid Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.760</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1335</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Cholesterol</td>
+												</tr>
+												<tr>
+													<td>HDL Cholesterol</td>
+												</tr>
+												<tr>
+													<td>LDL Cholesterol, Serum</td>
+												</tr>
+												<tr>
+													<td>Triglycerides, Serum</td>
+												</tr>
+												<tr>
+													<td>VLDL Cholesterol</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="LP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Liver Function Test</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.810</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1300</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+												</tr>
+												<tr>
+													<td>Bilirubin Total and Direct</td>
+												</tr>
+												<tr>
+													<td>GGTP (Gamma GT), Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Total Proteins with Albumin,Globulin,A/G</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="LFT" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  "  style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max - Vitamine Panel (Basic)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1720</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2650</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level,Serum</td>
+												</tr>
+												<tr>
+													<td>Vitamin B12, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MVPB" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable "  style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Adolescent Wellness Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2450</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.4460</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>CBC</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level</td>
+												</tr>
+												<tr>
+													<td>Vitamin B12</td>
+												</tr>
+												<tr>
+													<td>TSH</td>
+												</tr>
+												<tr>
+													<td>Iron and Total Iron Binding capacity, serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MAWP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Bone Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1950</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3825</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Calcium, Serum</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level</td>
+												</tr>
+												<tr>
+													<td>Inorganic Phosphorus</td>
+												</tr>
+												<tr>
+													<td>PTH (Parathyroid Hormone) - Intact</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MBP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Cardiac Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1750</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2880</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Lipid Profile</td>
+												</tr>
+												<tr>
+													<td>Liver Function Test Profile</td>
+												</tr>
+												<tr>
+													<td>Renal Profile (Without Urine)</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCARP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Diabetes Screening Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.450</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.660</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>OGTT - 2 SAMPLES (0 &amp; 2 HRS) WITH 75 GM OF GLUCOSE</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="DSP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Diabetes Screening Profile 2</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.350</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.520</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="DSP2" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Diabetes Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1950</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3040</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting</td>
+												</tr>
+												<tr>
+													<td>Blood Sugar 2 Hr. PP</td>
+												</tr>
+												<tr>
+													<td>Urea, Serum</td>
+												</tr>
+												<tr>
+													<td>Creatinine, Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>MAU / Creatinine Ratio Urine</td>
+												</tr>
+												<tr>
+													<td>Lipid Profile</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDP1" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Diabetes Extended Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2550</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.4090</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>Blood Sugar Fasting</td>
+												</tr>
+												<tr>
+													<td>Blood Sugar 2 Hr. PP</td>
+												</tr>
+												<tr>
+													<td>Liver Function Test Profile</td>
+												</tr>
+												<tr>
+													<td>Renal Profile (Without Urine)</td>
+												</tr>
+												<tr>
+													<td>Lipid Profile</td>
+												</tr>
+												<tr>
+													<td>MAU / Creatinine Ratio Urine</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDEP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Nutrition Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1450</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2165</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Total Protein, Serum</td>
+												</tr>
+												<tr>
+													<td>Albumin, Serum</td>
+												</tr>
+												<tr>
+													<td>Calcium, Serum</td>
+												</tr>
+												<tr>
+													<td>Vitamin B12 &amp; Folate, Serum</td>
+												</tr>
+												<tr>
+													<td>Ferritin</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MNP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item  col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Electrolyte Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.380</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.700</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Sodium, Serum</td>
+												</tr>
+												<tr>
+													<td>Potassium, Serum</td>
+												</tr>
+												<tr>
+													<td>Chloride, Serum</td>
+												</tr>
+												<tr>
+													<td>Bicarbonate, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MEP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Kidney Health Profile- Comprehensive</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.950</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1540</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Sodium, Serum</td>
+												</tr>
+												<tr>
+													<td>Potassium, Serum</td>
+												</tr>
+												<tr>
+													<td>Chloride, Serum</td>
+												</tr>
+												<tr>
+													<td>Bicarbonate, Serum</td>
+												</tr>
+												<tr>
+													<td>Uric Acid, Serum</td>
+												</tr>
+												<tr>
+													<td>Urea</td>
+												</tr>
+												<tr>
+													<td>Creatinine</td>
+												</tr>
+												<tr>
+													<td>Calcium, Serum</td>
+												</tr>
+												<tr>
+													<td>Inorganic Phosphorus</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MKHPC" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Cervical Screening</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1800</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3150</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Thin Prep/Sure Path Cytology</td>
+												</tr>
+												<tr>
+													<td>HPV DNA High Risk, Hybrid Capture (Automated)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCS" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Lipid Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.760</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1335</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Cholesterol</td>
+												</tr>
+												<tr>
+													<td>HDL Cholesterol</td>
+												</tr>
+												<tr>
+													<td>LDL Cholesterol, Serum</td>
+												</tr>
+												<tr>
+													<td>Triglycerides, Serum</td>
+												</tr>
+												<tr>
+													<td>VLDL Cholesterol</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="LP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item  col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Liver Function Test</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.810</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1300</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+												</tr>
+												<tr>
+													<td>Bilirubin Total and Direct</td>
+												</tr>
+												<tr>
+													<td>GGTP (Gamma GT), Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Total Proteins with Albumin,Globulin,A/G</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="LFT" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max - Vitamine Panel (Basic)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1720</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2650</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level,Serum</td>
+												</tr>
+												<tr>
+													<td>Vitamin B12, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MVPB" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Adolescent Wellness Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2450</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.4460</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>CBC</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level</td>
+												</tr>
+												<tr>
+													<td>Vitamin B12</td>
+												</tr>
+												<tr>
+													<td>TSH</td>
+												</tr>
+												<tr>
+													<td>Iron and Total Iron Binding capacity, serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MAWP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Bone Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1950</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3825</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Calcium, Serum</td>
+												</tr>
+												<tr>
+													<td>Alkaline Phosphatase</td>
+												</tr>
+												<tr>
+													<td>25 Hydroxy Vitamin D Level</td>
+												</tr>
+												<tr>
+													<td>Inorganic Phosphorus</td>
+												</tr>
+												<tr>
+													<td>PTH (Parathyroid Hormone) - Intact</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MBP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  "  style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Cardiac Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1750</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2880</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Lipid Profile</td>
+												</tr>
+												<tr>
+													<td>Liver Function Test Profile</td>
+												</tr>
+												<tr>
+													<td>Renal Profile (Without Urine)</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCARP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable  "  style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Diabetes Screening Profile</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.450</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.660</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Glycosylated Haemoglobin</td>
+												</tr>
+												<tr>
+													<td>OGTT - 2 SAMPLES (0 &amp; 2 HRS) WITH 75 GM OF GLUCOSE</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="DSP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+            <div class="customNavigation"> <a class="btn prev"><i class="fa fa-caret-left"></i></a> <a class="btn next"><i class="fa fa-caret-right"></i></a> </div>
+          </div>
+				</div>
+			</div>
+		</div>
+		<!-- Fever Profiles -->
+		<div class="lp_container">
+			<div class="col-max-12 sec_content">
+				<h2 class="max-heading">Fever Profiles</h2>
+				<div class="slick-initialized slick-slider" role="toolbar">
+					<div aria-live="polite" class="slick-list">
+						<div id="owl-demo2" class="owl-carousel" style="">
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Dengue Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.830</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1280</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Dengue Serology (Ig M &amp; Ig G),Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Chikungunya Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1400</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2180</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Chikungunya PCR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Fever &gt; 1 week)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2300</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3600</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Blood Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>Urine Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Widal Test (Tube Method)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item  col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever of Unknown Origin Panel (Fever &gt; 3 weeks)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.4380</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.6740</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Blood Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Bone Marrow Aspiration Examination</td>
+												</tr>
+												<tr>
+													<td>Bone Marrow Biopsy</td>
+												</tr>
+												<tr>
+													<td>Kala Azar Screening</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPO" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Basic)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.650</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1150</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Widal Test (Tube Method)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPB" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Comprehensive)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1700</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2670</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>Urine Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Typhidot (IgM)</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPC" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Dengue/Chikungunya Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1800</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2780</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Dengue NS1</td>
+												</tr>
+												<tr>
+													<td>Chikungunya PCR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDCP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Dengue Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.830</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1280</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Dengue Serology (Ig M &amp; Ig G),Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDP" tabindex="0">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Chikungunya Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1400</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2180</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Chikungunya PCR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MCP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Fever &gt; 1 week)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.2300</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.3600</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Blood Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>Urine Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Widal Test (Tube Method)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever of Unknown Origin Panel (Fever &gt; 3 weeks)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.4380</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.6740</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Blood Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>Bone Marrow Aspiration Examination</td>
+												</tr>
+												<tr>
+													<td>Bone Marrow Biopsy</td>
+												</tr>
+												<tr>
+													<td>Kala Azar Screening</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPO" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Basic)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.650</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1150</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Widal Test (Tube Method)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPB" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Fever Panel (Comprehensive)</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1700</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2670</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Hemogram,Peripheral Smear and ESR</td>
+												</tr>
+												<tr>
+													<td>Malaria Antigen</td>
+												</tr>
+												<tr>
+													<td>Urine Routine and Microscopy</td>
+												</tr>
+												<tr>
+													<td>Urine Culture and Sensitivity</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>Typhidot (IgM)</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MFPC" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable" style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Dengue/Chikungunya Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.1800</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.2780</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Dengue NS1</td>
+												</tr>
+												<tr>
+													<td>Chikungunya PCR</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDCP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="item col-max-11 ptable " style="width: 285px;">
+								<div class="ptable-container">
+									<table align="center">
+										<tbody>
+											<tr>
+												<td>
+													<h5>Max Dengue Panel</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellpadding="5" class="ltable">
+										<tbody>
+											<tr class="op">
+												<td style="text-align:left;">Offer Price</td>
+												<td style="text-align:right;">Rs.830</td>
+											</tr>
+											<tr class="ap">
+												<td style="text-align:left;">Actual Price</td>
+												<td style="text-align:right;">Rs.1280</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="col-max-12 tests sbar">
+										<table cellpadding="5" class="ltable">
+											<tbody>
+												<tr style="background: #224171;font-weight: bold;">
+													<td>Profiles</td>
+												</tr>
+												<tr>
+													<td>Complete Blood Count</td>
+												</tr>
+												<tr>
+													<td>Dengue Serology (Ig M &amp; Ig G),Serum</td>
+												</tr>
+												<tr>
+													<td>SGOT - Aspartate Amino Transferase, Serum</td>
+												</tr>
+												<tr>
+													<td>SGPT - Alanine Amino Transferase, Serum</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
+										<tbody>
+											<tr>
+												<td>
+													<button class="max-book" value="MDP" tabindex="-1">Book Now</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+            <div class="customNavigation"> <a class="btn prev2"><i class="fa fa-caret-left"></i></a> <a class="btn next2"><i class="fa fa-caret-right"></i></a> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="footer_content clearfix">
+		<div class="lp_container">
+			<div class="col-max-12 sec_content why-lab">
+				<h2 class="max-heading">Why Choose Max Lab</h2>
+				<div class="col-max-4 box">
+					<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/nurse.png'); ?>'>
+						<p>Over 550 highly trained staff</p>
+					</div>
+					<div class="col-max-4 box">
+						<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/doctor.png'); ?>'>
+							<p>More Than 70 doctors trained in various sub-specialities</p>
+						</div>
+						<div class="col-max-4 box">
+							<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/blood-sample.png'); ?>'>
+								<p>Over 50 lacs samples tested, every year</p>
+							</div>
+						</div>
+						<div class="col-max-12 sec_content why-lab">
+							<div class="col-max-4 box">
+								<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/lab.png'); ?>'>
+									<p>Highly Qualified haematologists, histopathologists, biochemists &amp; microbiologists</p>
+								</div>
+								<div class="col-max-4 box">
+									<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/24-hours.png'); ?>'>
+										<p>24x7 free home sample collection</p>
+									</div>
+									<div class="col-max-4 box">
+										<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/report.png'); ?>'>
+											<p>Quick reporting</p>
+										</div>
+									</div>
+									<div class="col-max-12 sec_content why-lab">
+										<div class="col-max-4 box">
+											<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/email.png'); ?>'>
+												<p>Reports available over email</p>
+											</div>
+											<div class="col-max-4 box">
+												<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/meeting.png'); ?>'>
+													<p>Immediate communication of critical values to treating physician</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<script>
+jQuery(document).ready(function() {
+	jQuery("#top-wellness .slick-track").css('width','80%');
+	jQuery("#top-wellness .slick-track").css('margin','0 auto');
+});
+
+</script>
+</section>
+
+
+<footer class="footer container">
+    <div class="region region-wrapper-bottom-footer clearfix">
+    <div class="region reg-bottom-footer">
+        <div class="region region-bottom-footer">
+    <section id="max-copyright-block" class="block block-block clearfix">
+
+
+  <div class="max-copyright-text">Copyright 2018 @ Max Lab. All rights reserved.</div>
+
+</section> <!-- /.block -->
+  </div>
+    </div>
+  </div>
+</footer>
+<div class="scroll-to-top" style="display: block;">
+  <img src='<?php echo $this->getViewFileUrl('images/icon_images/white.png'); ?>'>
+</div>
+<script>
+var jscroll = jQuery.noConflict();
+jscroll(document).ready(function () {
+  jscroll('.scroll-to-top').click(function () {
+      jscroll("html, body").animate({
+          scrollTop: 0
+      }, 600);
+      return false;
+  });
+
+});
+</script>
+<style>
+footer.footer.container .region-wrapper-bottom-footer {
+    background-color: #3cb9aa;
+    padding: 15px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+body.html>footer.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+}
+footer.footer.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #3cb9aa;
+    color: white;
+    font-size: 0;
+}
+body {
+    font-family: "Gudea",sans-serif,Helvetica;
+}
+.columns .column.main {
+     padding-bottom: 0px;
+  }
+  .block, .block-banners, .block-banners-inline {
+    margin-bottom: 0px;
+}
+.scroll-to-top {
+    background-color: #7be3d0;
+    position: fixed;
+    bottom: 36px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 5px 8px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    z-index: 999;
+    bottom: 60px !important;
+}
+.max-copyright-text {
+    font-size: 14px;
+    padding: 3px;
+}
+.owl-item{
+  display: inline-block;
+}
+.lp_container{
+  overflow: hidden;
+}
+.customNavigation {
+    margin-left: auto;
+    margin-right: auto;
+    width: 66px;
+}
+</style>

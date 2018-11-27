@@ -1,0 +1,58 @@
+[26-Aug-2017 15:26:06 UTC] PHP Fatal error:  Uncaught exception 'Zend\Stdlib\Exception\RuntimeException' with message 'No wrapper found supporting "UTF-8"' in /home/gotdeal/public_html/vendor/zendframework/zend-stdlib/src/StringUtils.php:135
+Stack trace:
+#0 /home/gotdeal/public_html/vendor/zendframework/zend-validator/src/Hostname.php(1336): Zend\Stdlib\StringUtils::getWrapper('UTF-8')
+#1 /home/gotdeal/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(287): Zend\Validator\Hostname->isValid('gotdeal.online')
+#2 /home/gotdeal/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(86): Zend\Http\PhpEnvironment\Request->setServer(Object(Zend\Stdlib\Parameters))
+#3 /home/gotdeal/public_html/vendor/magento/framework/HTTP/PhpEnvironment/Request.php(130): Zend\Http\PhpEnvironment\Request->__construct()
+#4 /home/gotdeal/public_html/vendor/magento/framework/App/Request/Http.php(116): Magento\Framework\HTTP\PhpEnvironment\Request->__construct(Object(Magento\Framework\Stdlib\Cookie\PhpCookieReader), Object(Magento\Framewor in /home/gotdeal/public_html/vendor/zendframework/zend-stdlib/src/StringUtils.php on line 135
+[26-Aug-2017 15:26:06 UTC] PHP Fatal error:  Uncaught exception 'Zend\Stdlib\Exception\RuntimeException' with message 'No wrapper found supporting "UTF-8"' in /home/gotdeal/public_html/vendor/zendframework/zend-stdlib/src/StringUtils.php:135
+Stack trace:
+#0 /home/gotdeal/public_html/vendor/zendframework/zend-validator/src/Hostname.php(1336): Zend\Stdlib\StringUtils::getWrapper('UTF-8')
+#1 /home/gotdeal/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(287): Zend\Validator\Hostname->isValid('gotdeal.online')
+#2 /home/gotdeal/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(86): Zend\Http\PhpEnvironment\Request->setServer(Object(Zend\Stdlib\Parameters))
+#3 /home/gotdeal/public_html/vendor/magento/framework/HTTP/PhpEnvironment/Request.php(130): Zend\Http\PhpEnvironment\Request->__construct()
+#4 /home/gotdeal/public_html/vendor/magento/framework/App/Request/Http.php(116): Magento\Framework\HTTP\PhpEnvironment\Request->__construct(Object(Magento\Framework\Stdlib\Cookie\PhpCookieReader), Object(Magento\Framewor in /home/gotdeal/public_html/vendor/zendframework/zend-stdlib/src/StringUtils.php on line 135
+[29-Nov-2017 17:37:57 UTC] PHP Fatal error:  Class 'DOMDocument' not found in /home/gotdeal/public_html/vendor/magento/framework/Config/Dom.php on line 377
+[29-Nov-2017 17:41:00 UTC] PHP Fatal error:  Class 'DOMDocument' not found in /home/gotdeal/public_html/vendor/magento/framework/Config/Dom.php on line 377
+[18-Dec-2017 14:05:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-customer/Model/ResourceModel/Address.php on line 11
+[18-Dec-2017 14:05:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-customer/Model/ResourceModel/Address.php on line 11
+[18-Dec-2017 14:05:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-eav/Model/Entity/VersionControl/AbstractEntity.php on line 12
+[18-Dec-2017 14:06:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-customer/Model/ResourceModel/Address.php on line 11
+[18-Dec-2017 14:06:32 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-customer/Model/ResourceModel/Address.php on line 11
+[18-Dec-2017 15:16:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 64 bytes) in /home/gotdeal/public_html/vendor/magento/framework/Code/Reader/ClassReader.php on line 64
+[18-Dec-2017 15:17:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 64 bytes) in /home/gotdeal/public_html/vendor/magento/framework/Code/Reader/ClassReader.php on line 64
+[18-Dec-2017 15:19:09 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 64 bytes) in /home/gotdeal/public_html/vendor/magento/framework/Code/Reader/ClassReader.php on line 64
+[18-Dec-2017 15:19:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3072 bytes) in /home/gotdeal/public_html/vendor/composer/ClassLoader.php on line 412
+[18-Dec-2017 15:21:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/gotdeal/public_html/vendor/magento/framework/Code/Reader/ClassReader.php on line 66
+[18-Dec-2017 15:25:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 248 bytes) in /home/gotdeal/public_html/vendor/magento/module-customer/Model/ResourceModel/Address.php on line 11
+[18-Dec-2017 15:28:07 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3072 bytes) in /home/gotdeal/public_html/vendor/composer/ClassLoader.php on line 412
+[18-Dec-2017 15:28:16 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3072 bytes) in /home/gotdeal/public_html/vendor/composer/ClassLoader.php on line 412
+[18-Dec-2017 15:35:00 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 64 bytes) in /home/gotdeal/public_html/vendor/magento/framework/Code/Reader/ClassReader.php on line 64
+[18-Dec-2017 15:35:06 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3072 bytes) in /home/gotdeal/public_html/vendor/composer/ClassLoader.php on line 412
+[18-Dec-2017 15:56:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16384 bytes) in /home/gotdeal/public_html/setup/src/Magento/Setup/Console/Command/I18nPackCommand.php on line 42
+[18-Dec-2017 15:56:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16384 bytes) in /home/gotdeal/public_html/setup/src/Magento/Setup/Console/Command/I18nPackCommand.php on line 42
+[24-Dec-2017 19:55:08 UTC] PHP Fatal error:  Can't use function return value in write context in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 22
+[24-Dec-2017 19:55:14 UTC] PHP Fatal error:  Can't use function return value in write context in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 22
+[24-Dec-2017 19:55:44 UTC] PHP Fatal error:  Can't use function return value in write context in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 22
+[24-Dec-2017 20:23:46 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 22
+[26-Dec-2017 12:09:28 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '(' in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 76
+[26-Dec-2017 12:10:07 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '(' in /home/gotdeal/public_html/app/design/frontend/Vicomage/maxstore/Magento_Catalog/templates/product/view/details.phtml on line 76
+[27-Dec-2017 11:35:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Ipragmatech\Ipcheckout\Observer\save() in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Observer/Generatebill.php:167
+Stack trace:
+#0 /home/gotdeal/public_html/vendor/magento/framework/Event/Invoker/InvokerDefault.php(73): Ipragmatech\Ipcheckout\Observer\Generatebill->execute(Object(Magento\Framework\Event\Observer))
+#1 /home/gotdeal/public_html/vendor/magento/framework/Event/Invoker/InvokerDefault.php(61): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod(Object(Ipragmatech\Ipcheckout\Observer\Generatebill), Object(Magento\Framework\Event\Observer))
+#2 /home/gotdeal/public_html/vendor/magento/framework/Event/Manager.php(66): Magento\Framework\Event\Invoker\InvokerDefault->dispatch(Array, Object(Magento\Framework\Event\Observer))
+#3 /home/gotdeal/public_html/var/generation/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch('checkout_onepag...', Array)
+#4 /home/gotdeal/public_html/vendor/magento/modul in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Observer/Generatebill.php on line 167
+[27-Dec-2017 11:57:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Ipragmatech\Ipcheckout\Observer\save() in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Observer/Generatebill.php:167
+Stack trace:
+#0 /home/gotdeal/public_html/vendor/magento/framework/Event/Invoker/InvokerDefault.php(73): Ipragmatech\Ipcheckout\Observer\Generatebill->execute(Object(Magento\Framework\Event\Observer))
+#1 /home/gotdeal/public_html/vendor/magento/framework/Event/Invoker/InvokerDefault.php(61): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod(Object(Ipragmatech\Ipcheckout\Observer\Generatebill), Object(Magento\Framework\Event\Observer))
+#2 /home/gotdeal/public_html/vendor/magento/framework/Event/Manager.php(66): Magento\Framework\Event\Invoker\InvokerDefault->dispatch(Array, Object(Magento\Framework\Event\Observer))
+#3 /home/gotdeal/public_html/var/generation/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch('checkout_onepag...', Array)
+#4 /home/gotdeal/public_html/vendor/magento/modul in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Observer/Generatebill.php on line 167
+[02-Jan-2018 19:03:35 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Ipragmatech\Ipcheckout\Ui\Component\Listing\Column\Gender::__construct() must implement interface Magento\Framework\View\Element\UiComponent\ContextInterface, instance of Magento\Framework\ObjectManager\ObjectManager given, called in /home/gotdeal/public_html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php on line 93 and defined in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Ui/Component/Listing/Column/Gender.php:16
+Stack trace:
+#0 /home/gotdeal/public_html/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(93): Ipragmatech\Ipcheckout\Ui\Component\Listing\Column\Gender->__construct(Object(Magento\Framework\ObjectManager\ObjectManager))
+#1 /home/gotdeal/public_html/vendor/magento/framework/ObjectManager/Factory/Compiled.php(88): Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Ipragmatech\\Ipc...', Array)
+#2 /home/gotdeal/public_html/vendor/magento/framework/ObjectManager/ObjectManager.php(57): Magen in /home/gotdeal/public_html/app/code/Ipragmatech/Ipcheckout/Ui/Component/Listing/Column/Gender.php on line 16

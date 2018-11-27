@@ -1,0 +1,63 @@
+<!--@subject Contact Us@-->
+
+<!-- {{template config_path="design/email/header_template"}} -->
+<div class="form-left">
+    <img src="https://maxlab.co.in/pub/media/logo/websites/1/logo.png" alt="Max Lab" width="200px" height="70px" >
+</div>
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    <h3>This is the response from Max Lab Campaign. Please contact customer.</h3>
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Name:</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;">{{var data.name}}</td>
+                    </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">E-mail: </td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;">{{var data.email}}</td>
+                    </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Telephone: </td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;"> {{var data.telephone}}</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Package Name:</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;"> {{var data.test_name}}</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Package Code:</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;"> {{var data.test_code}}</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Query:</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;"> {{var data.query}}</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Query At:</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;"> {{var data.creation_time}}</td>
+                    </tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;">&nbsp;</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;">&nbsp;</td>
+                    </tr>
+                </table>
+                <!-- <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td align="center" style="text-align:left;width:30%;font-weight:bold;">Regards, {{var data.name}}</td>
+                        <td align="center" style="padding-left:5px;text-align:left;width:70%;">&nbsp;</td>
+                    </tr>
+                </table> -->
+            </td>
+        </tr>
+    </table>
+</div>
+{{template config_path="design/email/footer_template"}}

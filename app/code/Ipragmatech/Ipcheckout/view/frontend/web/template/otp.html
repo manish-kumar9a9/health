@@ -1,0 +1,108 @@
+<!--The 'step_code' value from the .js file should be used-->
+<li id="otpstep" data-bind="fadeVisible: isVisible">
+<div class="step-title mobile-verification " data-bind="i18n: 'Mobile verification'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <!-- <form id="patent-otp-form" class="form mobile-otp-form form-shipping-address" data-mage-init='{"validation":{}}' data-bind="submit: navigateToNextStep" novalidate="novalidate"> -->
+        <form id="patent-otp-form" class="form mobile-otp-form form-shipping-address" data-mage-init='{"validation":{}}' novalidate="novalidate">
+        	<div class="fieldset"  data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+                <div style="display:none" id="errMsg" class="message-error error message"><div></div><label></label></div>
+                <div style="display:none" id="successMsg" class="message-success success message"><div></div><label></label></div>
+
+                <div id="mobileNoWrapper" class="field field-mobileno required">
+                    <label class="label" for="mobileno"><span data-bind="i18n: 'Mobile No'"></span></label>
+                    <div class="control">
+                        <input type="number"
+                               class="input-text validate-digits required-entry"
+                               id="mobileno"
+                               name="mobileno"
+                               data-validate="{required:true, 'validate-number':true}" />
+                    </div>
+
+                </div>
+
+                <!--otp-->
+                <div id="mobileOTPWrapper" style="display:none;" class="field field-mobilotp required">
+                    <label class="label" for="mobileotp"><span data-bind="i18n: 'Enter OTP'"></span></label>
+                    <div class="control">
+                        <input type="number"
+                               class="input-text validate-digits required-entry"
+                               id="mobileotp"
+                               name="mobileotp"
+                               data-validate="{required:true}" />
+                    </div>
+                    <a id="resendOTP" style="display:none;" data-bind="click: sendOTP" >Resend OTP </a>
+                    <div class="timer-msg" id="timermsg"></div>
+                </div>
+
+                <div id="ip-user-list" class="field">
+                    <div id="max-list" class="customer-list">
+                    </div>
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button id="sendotp" type="button" data-bind="click: sendOTP" class="button action action-update primary">
+                        <span><!-- ko i18n: 'Send OTP'--><!-- /ko --></span>
+                    </button>
+                </div>
+
+                <div class="primary">
+                    <button id="verifyotp" style="display:none;"  type="button" data-bind="click: verifyOTP" class="button action action-update primary">
+                        <span><!-- ko i18n: 'Verify OTP'--><!-- /ko --></span>
+                    </button>
+                </div>
+                <div class="primary">
+                    <button  style="display:none;" data-role="opc-continue" type="button" id="ipnext" data-bind="click: navigateToNextStep" class="button action continue primary">
+                        <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                    </button>
+                </div>
+
+                <div class="primary">
+                    <!--<a id="changeno" class="change-no" style="display:none;" data-bind="click: changeNo" >Change Number</a>-->
+                    <button id="changeno" style="display:none;"  type="button" data-bind="click: changeNo" class="button action action-update primary">
+                        <span><!-- ko i18n: 'Edit Number'--><!-- /ko --></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
+<style>
+    #ip-user-list ul {
+        list-style: none;
+    }
+    .authentication-wrapper{
+        display: none !important;
+    }
+    .shipping-information .ship-to {
+        display: none;
+    }
+    #customer-email-fieldset .note{
+        display: none;
+    }
+    .opc-wrapper .form-login{
+        padding: 0px 0px;
+    }
+    .opc-wrapper .form-login {
+        border-bottom: none !important;
+        padding-bottom: 0px !important;
+    }
+    th.member-heading {
+        background-color: #4c6689;
+        color: #FFFFFF;
+        border-right: 1px solid #FFFFFF !important;
+    }
+    #resendOTP {
+        text-decoration: none;
+        cursor: pointer;
+        border-bottom: 1px solid #eb7422;
+    }
+    .change-no{
+        text-decoration: none;
+        cursor: pointer;
+        border-bottom: 1px solid #eb7422;
+    }
+</style>

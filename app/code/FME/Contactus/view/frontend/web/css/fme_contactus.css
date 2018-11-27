@@ -1,0 +1,145 @@
+
+body{ margin:0; font-family:'Open Sans', sans-serif;}
+
+.clear{ clear:both;}
+
+.main_block{ width:100%;}
+
+.inner_container{ margin: 0 auto; max-width: 1152px; padding: 0px 15px;}
+
+.map_container{ width:100%}
+
+.map_container .page_title { padding:30px 0;}
+
+.map_container .page_title h1{ text-align:center; color: #333; font-size: 24px;
+font-weight:700; text-transform:uppercase;}
+
+.map_container .page_title h1 span{ color:#1979c3;}
+
+.map_container .map_block{ width:100%; text-align:center; margin-bottom:30px;}
+
+.map_container .map_block img{ max-width:100%;}
+
+/*contact_container*/
+
+.main_block .contact_container{ margin:0;}
+
+.main_block .contact_container ul{ margin:0; padding:0; list-style:none;}
+
+.main_block .contact_container ul li{ float:left; width:310px; margin:0 23px 0 0; background-color:#f2f2f2;
+padding:20px; text-align:center; border-radius:3px;}
+
+.main_block .contact_container ul .last{ margin-right:0;}
+
+.main_block .contact_container ul .divider{ width:1px; height:60px; padding:0; margin-top:32px;
+ background-color:#f2f2f2;border-radius:0px;}
+
+.main_block .contact_container ul li h3{ font-size:18px; font-weight:600; color:#1979c3; margin:0;
+padding-bottom:10px;}
+
+.main_block .contact_container ul li p{ color: #333; font-size:14px; font-weight: normal;
+line-height:24px; margin:0;}
+
+.main_block .contact_container ul li p a{color: #333; text-decoration:none;}
+
+.main_block .contact_container ul li p a:hover{ color:#1979c3;}
+
+/*form block*/
+    
+.main_block .form_block{ background-color:#f2f2f2; padding:30px; margin-top:50px;}
+
+.main_block .form_block .input_outer{ width:360px; margin:0 35px 30px 0; float:left;}
+
+.main_block .form_block .last{ margin-right:0;}
+
+.main_block .form_block .input_outer .input{ width:100%; background-color:#FFF; border:solid 1px #e7e7e7;
+padding:15px 0; text-indent:15px;font-size:14px;color: #333;}
+
+.main_block .form_block .textarea_input{ width:100%; background-color:#FFF; border:solid 1px #e7e7e7;
+padding:20px 15px;font-size:14px;color: #333;
+font-family:'Open Sans', sans-serif; line-height:24px; box-sizing:border-box;}
+
+/*captcha_container*/
+
+.main_block .form_block .captcha_container{ float: right; margin-top:40px;}
+
+.main_block .form_block .captcha_container .button { float:right; padding:0px; margin:0px;}
+
+.main_block .form_block .captcha_container
+.button { border: 1px solid #e7e7e7; background:#1979c3;
+ box-sizing: border-box; color: #fff; font-size: 15px; font-weight: 600; padding: 15px 27px 13px 27px;
+ cursor:pointer; font-family:'Open Sans', sans-serif;}
+
+.main_block .form_block .captcha_container .button:hover{ background:#484848 none repeat scroll 0 0;
+ color: #fff;}
+
+.main_block .form_block .captcha_container .Submit_input{ float:right;}
+
+.main_block .form_block .captcha_container .Submit_input .input {   border: 1px solid #e7e7e7; color: #5a5a5a;
+ font-size: 15px; padding: 15px 0; width:100px;
+ margin:0px 15px 0 0; text-align:center; text-indent:0; background-color:#fff;}
+
+.main_block .form_block .captcha_container .captcha { float:right; margin:0px 15px 0 0; width:160px;}
+
+.main_block .form_block .captcha_container .captcha img{ border: 1px solid #e7e7e7; max-width:100%;}
+
+
+
+/*responsive*/
+
+@media (min-width: 200px) and (max-width: 650px) {
+.map_container .page_title { padding: 10px 0;}
+.map_container .page_title h1 { font-size: 18px;}
+.main_block .contact_container ul{ text-align:center;}
+.main_block .contact_container ul li {width: auto; margin-bottom:30px; float:none; margin-right:0;}
+.main_block .contact_container ul .divider { display:none;}
+.main_block .form_block { padding: 25px 0; margin-top:1px;}
+.main_block .form_block .input_outer { width: 100%;}
+}
+@media (min-width: 650px) and (max-width: 1200px) {
+.main_block .contact_container ul{ text-align:center;}
+.main_block .contact_container ul li {width: 29%; margin-right:5px; padding:20px 10px; min-height:130px; float:none;
+display:inline-block; vertical-align:top;}
+.main_block .contact_container ul .divider { display:none;}
+.main_block .contact_container ul li h3 { font-size: 17px; font-weight: 400;}
+.main_block .form_block { padding: 10px 0px;}
+.main_block .contact_container ul li p{ font-size:13px;}
+}
+@media (min-width: 650px) and (max-width: 850px){
+.main_block .form_block .input_outer { width: 32%; margin:0 12px 10px 0;}
+.main_block .form_block .last { margin-right:0;}
+}
+@media (min-width: 850px) and (max-width: 1150px){
+.main_block .form_block .input_outer { width: 32%; margin:0 16px 10px 0;}
+.main_block .form_block .last { margin-right:0;}
+}
+@media (min-width: 1150px) and (max-width: 1240px){
+.main_block .form_block .input_outer { width: 32%; margin:0 20px 10px 0;}
+.main_block .form_block .last { margin-right:0;}
+}
+
+
+
+@media (min-width: 200px) and (max-width: 550px){
+.main_block .form_block .captcha_container .button { font-size: 12px; font-weight: 400; padding: 6px 7px;
+text-transform:none;}
+.main_block .form_block .captcha_container .Submit_input .input {margin: 0 5px 0 0; width: 60px; padding:6px 0;}
+.main_block .form_block .captcha_container .captcha { margin: 0 8px 0 0; width: 100px;}
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

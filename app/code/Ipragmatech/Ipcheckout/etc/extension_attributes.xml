@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Checkout\Api\Data\ShippingInformationInterface">
+        <attribute code="max_id" type="string" />
+        <attribute code="max_city_id" type="string" />
+        <attribute code="max_city_name" type="string" />
+        <attribute code="max_gender" type="string" />
+        <attribute code="max_dob" type="string" />
+        <attribute code="max_schedule" type="string" />
+        <attribute code="max_schedule_date" type="string" />
+    </extension_attributes>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+      <tab id="contactwidget" translate="label" sortOrder="100">
+          <label>Ipragmatech</label>
+      </tab>
+      <!-- Contact Form Widget -->
+      <section id="contactme_section" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Capmaign Configuration</label>
+          <tab>ipragmatech</tab>
+          <resource>Ipragmatech_Contactme::contactme</resource>
+          <!-- Email Setup Options Group -->
+          <group id="emailsend" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Email Setup Options</label>
+              <!-- Send Emails To -->
+              <field id="emailto" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                  <label>Send Emails To</label>
+
+              </field>
+              <!-- Email Sender -->
+              <field id="emailsenderto" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                  <label>Email Sender</label>
+                  <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+              </field>
+              <!-- Email Template -->
+              <field id="emailtemplate" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                  <label>Email Template</label>
+                  <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+              </field>
+          </group>
+      </section>
+    </system>
+</config>

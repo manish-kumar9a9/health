@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="ip_save_max_in_quote" type="Ipragmatech\Ipcheckout\Plugin\Checkout\Model\ShippingInformationManagementPlugin" sortOrder="1"/>
+    </type>
+    <type name="Magento\Sales\Model\Order\Email\Container\OrderIdentity">
+        <plugin name="change_is_enable_method" type="Ipragmatech\Ipcheckout\Plugin\Sales\Order\Email\Container\OrderIdentityPlugin"/>
+    </type>
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="max_id" xsi:type="string">sales_order.max_id</item>
+                <item name="max_city_id" xsi:type="string">sales_order.max_city_id</item>
+                <item name="max_city_name" xsi:type="string">sales_order.max_city_name</item>
+                <item name="max_gender" xsi:type="string">sales_order.max_gender</item>
+                <item name="max_dob" xsi:type="string">sales_order.max_dob</item>
+                <item name="max_schedule" xsi:type="string">sales_order.max_schedule</item>
+                <item name="max_schedule_date" xsi:type="string">sales_order.max_schedule_date</item>
+
+                <item name="max_hos_name" xsi:type="string">sales_order.max_hos_name</item>
+                <item name="max_bill_no" xsi:type="string">sales_order.max_bill_no</item>
+                <item name="max_bill_id" xsi:type="string">sales_order.max_bill_id</item>
+                <item name="max_payuid" xsi:type="string">sales_order.max_payuid</item>
+                <item name="max_payu_tranc" xsi:type="string">sales_order.max_payu_tranc</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>
