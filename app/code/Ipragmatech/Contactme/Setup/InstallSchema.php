@@ -73,6 +73,13 @@ class InstallSchema implements InstallSchemaInterface
             'test_name'
         )
 		->addColumn(
+            'city_name',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            '64k',
+            [],
+            'city_name'
+        )
+		->addColumn(
             'query',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             '2M',

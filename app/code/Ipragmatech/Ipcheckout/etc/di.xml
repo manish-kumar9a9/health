@@ -6,6 +6,19 @@
     <type name="Magento\Sales\Model\Order\Email\Container\OrderIdentity">
         <plugin name="change_is_enable_method" type="Ipragmatech\Ipcheckout\Plugin\Sales\Order\Email\Container\OrderIdentityPlugin"/>
     </type>
+    <type name="Magento\Sales\Block\Adminhtml\Order\View">
+        <plugin name="Ipragmatech_Ipcheckout_adminhtml_order_view_add_button" type="Ipragmatech\Ipcheckout\Plugin\Sales\Block\Adminhtml\Order\View" sortOrder="10" />
+    </type>
+    <!--<type name="Magento\Backend\Block\Widget\Button\Toolbar">-->
+        <!--<plugin name="Ipragmatech_Ipcheckout::pluginBefore" type="Ipragmatech\Ipcheckout\Plugin\PluginBefore" />-->
+    <!--</type>-->
+    <!--<type name="\Magento\Sales\Block\Adminhtml\Order\View">-->
+        <!--<plugin name="Ipragmatech_Ipcheckout::pluginBeforeView" type="Ipragmatech\Ipcheckout\Plugin\PluginBeforeView" />-->
+    <!--</type>-->
+
+    <!--<type name="Magento\Backend\Block\Widget\Context">-->
+        <!--<plugin name="add_custom_button_sales_veiw" type="Ipragmatech\Ipcheckout\Plugin\Widget\Context" sortOrder="1"/>-->
+    <!--</type>-->
 
     <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
         <arguments>

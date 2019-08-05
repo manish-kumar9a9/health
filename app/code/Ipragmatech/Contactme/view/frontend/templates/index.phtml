@@ -231,8 +231,6 @@ jwindow.scroll(function() {
     <div class="contectme-widget campaign-webform">
       <?php echo $this->getLayout()->createBlock("Ipragmatech\Contactme\Block\Widget\Contactme")
                       ->setDisplayType("contactme")
-                      ->setCityName("New Delhi")
-                      ->setUtmCampaign($block->getRequest()->getParam('utm_campaign') ?$block->getRequest()->getParam('utm_campaign') : '' )
                       ->setTemplate("widget/contactme_widget.phtml")
                       ->toHtml(); ?>
     </div>
@@ -384,15 +382,15 @@ var jco = jQuery.noConflict();
 jco(document).ready(function() {
   var owl = jco("#owl-demo");
   owl.owlCarousel({
-    autoPlay: 2000,
-    loop : true,
-    rewind : false,
-    items : 4, //10 items above 1000px browser width
-    itemsDesktop : [1000,4], //5 items between 1000px and 901px
-    itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
-    itemsTablet: [600,2], //2 items between 600 and 0;
-    itemsMobile : [479,1], // itemsMobile disabled - inherit from itemsTablet option
-    pagination:false
+  autoPlay: 2000,
+  loop : true,
+  rewind : false,
+  items : 4, //10 items above 1000px browser width
+  itemsDesktop : [1000,4], //5 items between 1000px and 901px
+  itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+  itemsTablet: [600,2], //2 items between 600 and 0;
+  itemsMobile : [479,1], // itemsMobile disabled - inherit from itemsTablet option
+  pagination:false
   });
   jco(".next").click(function(){
       owl.trigger('owl.next');
@@ -403,15 +401,15 @@ jco(document).ready(function() {
 
     var owl2 = jco("#owl-demo2");
     owl2.owlCarousel({
-      autoPlay: 2000,
-      loop : true,
-      rewind : false,
-      items : 4, //10 items above 1000px browser width
-      itemsDesktop : [1000,4], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
-      itemsTablet: [600,2], //2 items between 600 and 0;
-      itemsMobile : [479,1], // itemsMobile disabled - inherit from itemsTablet option
-      pagination:false
+    autoPlay: 2000,
+    loop : true,
+    rewind : false,
+    items : 4, //10 items above 1000px browser width
+    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+    itemsTablet: [600,2], //2 items between 600 and 0;
+    itemsMobile : [479,1], // itemsMobile disabled - inherit from itemsTablet option
+    pagination:false
     });
     jco(".next2").click(function(){
         owl2.trigger('owl.next');
@@ -422,14 +420,14 @@ jco(document).ready(function() {
 
     var owl3 = jco("#owl-demo3");
     owl3.owlCarousel({
-      autoPlay: 2000,
-      items : 3, //10 items above 1000px browser width
-      itemsDesktop : [1000,4], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,1], // 3 items betweem 900px and 601px
-      itemsTablet: [600,2], //2 items between 600 and 0;
-      itemsMobile : [479,1],// itemsMobile disabled - inherit from itemsTablet option
-      singleItem : false,
-      pagination:true
+    autoPlay: false,
+    items : 3, //10 items above 1000px browser width
+    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    itemsDesktopSmall : [900,1], // 3 items betweem 900px and 601px
+    itemsTablet: [600,2], //2 items between 600 and 0;
+    itemsMobile : [479,1],// itemsMobile disabled - inherit from itemsTablet option
+    singleItem : false,
+    pagination:true
     });
     jco(".next3").click(function(){
         owl3.trigger('owl.next');
@@ -448,7 +446,6 @@ jco(document).ready(function() {
 				<div id="top-wellness" class="">
 					<div aria-live="polite" class="slide-list">
 						<div id="owl-demo3" class="owl-carousel" style="">
-              <!--1-->
 							<div class=" item col-max-11 ptable ">
 								<div class="ptable-container">
 									<table align="center">
@@ -646,8 +643,6 @@ jco(document).ready(function() {
 									</table>
 								</div>
 							</div>
-              <!--1-->
-              <!--2-->
 							<div class="item col-max-11 ptable ">
 								<div class="ptable-container">
 									<table align="center">
@@ -825,8 +820,6 @@ jco(document).ready(function() {
 									</table>
 								</div>
 							</div>
-              <!--2-->
-              <!--3-->
 							<div class="item col-max-11 ptable">
 								<div class="ptable-container">
 									<table align="center">
@@ -944,449 +937,7 @@ jco(document).ready(function() {
 									</table>
 								</div>
 							</div>
-              <!--3-->
-              <!--4-->
-              <div class="item col-max-11 ptable">
-								<div class="ptable-container">
-									<table align="center">
-										<tbody>
-											<tr>
-												<td>
-													<h5>WellWise Exclusive Profile – Male</h5>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<table cellpadding="5" class="ltable">
-										<tbody>
-											<tr class="op">
-												<td style="text-align:left;">Offer Price</td>
-												<td style="text-align:right;">Rs.3800</td>
-											</tr>
-											<tr class="ap">
-												<td style="text-align:left;">Actual Price</td>
-												<td style="text-align:right;">Rs.9794</td>
-											</tr>
-										</tbody>
-									</table>
-									<div class="col-max-12 tests sbar">
-										<table cellpadding="5" class="ltable">
-											<tbody>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Anaemia & Infection</td>
-													<td>Parameters</td>
-												</tr>
-												<tr>
-													<td>Complete Heamogram, PS & ESR</td>
-													<td>1	</td>
-												</tr>
-												<tr>
-													<td>Iron and Total Iron Binding Capacity, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Ferritin, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Diabetes </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Blood Sugar Fasting,Fluoride Plasma</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Glycosylated Haemoglobin (HbA1C),EDTA</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Kidney </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Creatinine, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Urea, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Sodium, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Potassium, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Chloride, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Bicarbonate, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Uric Acid, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Liver </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Total Proteins with Albumin, Globulin, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>SGOT - Aspartate Amino Transferase, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>SGPT - Alanine Amino Transferase, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Bilirubin Total and Direct</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>BUN, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Gamma GT, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Alkaline Phosphatase</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Heart </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Cholesterol Total</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>VLDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>HDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>LDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Cholesterol/ HDL Ratio</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Triglycerides, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Vitamin </td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>25 Hydroxy Vitamin D Level</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Vitamin B12</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Thyroid </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>FT3</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>FT4</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>TSH</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Bone </td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>Calcium, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Inorganic Phosphorus</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Others</td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>Prostate Specific Antigen (P.S.A.) - Total</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>CRP (C-Reactive Protein), High Sensitive, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Urine Routine and Microscopy</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Total</td>
-													<td>43</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
-										<tbody>
-											<tr>
-												<td>
-													<button class="max-book" value="MBWP" tabindex="0">Book Now</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-              <!--4-->
-              <!--5-->
-              <div class="item col-max-11 ptable">
-								<div class="ptable-container">
-									<table align="center">
-										<tbody>
-											<tr>
-												<td>
-													<h5>WellWise Exclusive Profile – Female</h5>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<table cellpadding="5" class="ltable">
-										<tbody>
-											<tr class="op">
-												<td style="text-align:left;">Offer Price</td>
-												<td style="text-align:right;">Rs.3800</td>
-											</tr>
-											<tr class="ap">
-												<td style="text-align:left;">Actual Price</td>
-												<td style="text-align:right;">Rs.9794</td>
-											</tr>
-										</tbody>
-									</table>
-									<div class="col-max-12 tests sbar">
-										<table cellpadding="5" class="ltable">
-											<tbody>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Anaemia & Infection</td>
-													<td>Parameters</td>
-												</tr>
-												<tr>
-													<td>Complete Heamogram, PS & ESR</td>
-													<td>1	</td>
-												</tr>
-												<tr>
-													<td>Iron and Total Iron Binding Capacity, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Ferritin, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Diabetes </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Blood Sugar Fasting,Fluoride Plasma</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Glycosylated Haemoglobin (HbA1C),EDTA</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Kidney </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Creatinine, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Urea, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Sodium, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Potassium, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Chloride, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Bicarbonate, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Uric Acid, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Liver </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Total Proteins with Albumin, Globulin, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>SGOT - Aspartate Amino Transferase, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>SGPT - Alanine Amino Transferase, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Bilirubin Total and Direct</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>BUN, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Gamma GT, Serum</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Alkaline Phosphatase</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Heart </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Cholesterol Total</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>VLDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>HDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>LDL</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Cholesterol/ HDL Ratio</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>Triglycerides, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Vitamin </td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>25 Hydroxy Vitamin D Level</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Vitamin B12</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Thyroid </td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>FT3</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>FT4</td>
-													<td>1</td>
-												</tr>
-												<tr>
-													<td>TSH</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Bone </td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>Calcium, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Inorganic Phosphorus</td>
-													<td>1</td>
-												</tr>
-                        <tr style="background: #224171;font-weight: bold;">
-													<td>Others</td>
-													<td></td>
-												</tr>
-                        <tr>
-													<td>CRP (C-Reactive Protein), High Sensitive, Serum</td>
-													<td>1</td>
-												</tr>
-                        <tr>
-													<td>Urine Routine and Microscopy</td>
-													<td>1</td>
-												</tr>
-												<tr style="background: #224171;font-weight: bold;">
-													<td>Total</td>
-													<td>43</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<table cellpadding="5" class="ltable" style="border-bottom: 1px solid #eee;">
-										<tbody>
-											<tr>
-												<td>
-													<button class="max-book" value="MBWP" tabindex="0">Book Now</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-              <!--5-->
 						</div>
-            <div class="customNavigation"> <a class="btn prev3"><i class="fa fa-caret-left"></i></a> <a class="btn next3"><i class="fa fa-caret-right"></i></a> </div>
 					</div>
 				</div>
 			</div>

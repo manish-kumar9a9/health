@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+  <head>
+         <css src="Ipragmatech_Contactme::css/max-labs.css"/>
+         <css src="Ipragmatech_Contactme::css/campaign.css"/>
+  </head>
+     <body>
+       <update handle="empty"/>
+       <referenceContainer name="footer-container" remove="true"/>
+       <referenceContainer name="page.wrapper">
+          <referenceBlock name="vico_header" remove="true"/>
+       </referenceContainer>
+       <referenceContainer name="page.top">
+           <!-- <block class="Magento\Cms\Block\Block" name="home_slider">
+               <arguments>
+                   <argument name="block_id" xsi:type="string">block_home1_slide</argument>
+               </arguments>
+           </block> -->
+       </referenceContainer>
+
+        <referenceContainer name="content">
+			       <block class="Ipragmatech\Contactme\Block\Index\Index" name="index_index" template="dehradun/index.phtml">
+			          </block>
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <referenceBlock  name="vicomage.quickview.initialize" remove="true"/>
+        </referenceContainer>
+    </body>
+</page>

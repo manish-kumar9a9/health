@@ -152,6 +152,9 @@ class Save extends \Magento\Framework\App\Action\Action
             if (!\Zend_Validate::is(trim($data['packagename']), 'NotEmpty')) {
                 $error = true;
             }
+            if (!\Zend_Validate::is(trim($data['city_name']), 'NotEmpty')) {
+                $error = true;
+            }
 
             if ($error) {
                 throw new \Exception();
@@ -195,6 +198,7 @@ class Save extends \Magento\Framework\App\Action\Action
               'mobile' => trim($data['telephone']),
               'test_code' => trim($data['packagename']),
               'test_name' => $selectedPackageName,
+              'city_name' => trim($data['city_name']),
               'query' => isset($data['query']) ? trim($data['query']) : '',
               'creation_time'=> $date
             );
@@ -212,6 +216,13 @@ class Save extends \Magento\Framework\App\Action\Action
             $contactModel = $this->_contactmeModel->create();
             $contactModel->setData($contactData);
             $contactModel->save();
+
+            //set Session
+            //$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+            $maxOfferCustomerSession = $objectManager->get('Magento\Customer\Model\Session');
+            $maxOfferCustomerSession->setOfferEmail(trim($data['email']));
+            $maxOfferCustomerSession->setOfferPhone(trim($data['telephone']));
+            $maxOfferCustomerSession->setOfferUtm(trim($data['utm_campaign']));
 
             $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
             $sendToString = $this->_scopeConfig->getValue(
@@ -247,16 +258,16 @@ class Save extends \Magento\Framework\App\Action\Action
             //return $resultRedirect->setUrl($redirectUrl);
             return $resultRedirect->setUrl('https://maxlab.co.in/offer/thankyou');
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
-            $logger->info("Ex1: ".$e->getMesage());
+            $logger->info("Ex1: ".$e->getMessage());
             $this->messageManager->addError($e->getMessage());
             return $resultRedirect->setUrl($redirectUrl);
 
         } catch (\RuntimeException $e) {
-          $logger->info("Ex2: ".$e->getMesage());
+          $logger->info("Ex2: ".$e->getMessage());
             $this->messageManager->addError($e->getMessage());
             return $resultRedirect->setUrl($redirectUrl);
         } catch (\Exception $e) {
-            $logger->info("Ex3: ".$e->getMesage());
+            $logger->info("Ex3: ".$e->getMessage());
             $this->_inlineTranslation->resume();
             $this->messageManager->addException($e, __('Something went wrong '
                     . 'while sending the contact us request.'));

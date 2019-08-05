@@ -13,11 +13,11 @@
     <widget id="contactme_widget_custom" class="Ipragmatech\Contactme\Block\Widget\Contactme">
         <label translate="true">ContactMe - maxlab custom widget</label>
         <description>ContactMe - maxlab custom widget</description>
-        <!-- <parameters>
-            <parameter name="cc_title" xsi:type="text" visible="true" required="true" sort_order="0" >
+        <parameters>
+            <parameter name="city_name" xsi:type="text" visible="true" required="true" sort_order="0" >
                 <label translate="true">Title</label>
             </parameter>
-            <parameter name="cc_content" xsi:type="block" visible="true" sort_order="10">
+          <!--   <parameter name="cc_content" xsi:type="block" visible="true" sort_order="10">
                 <label translate="true">Description</label>
                 <block class="Solwin\Contactwidget\Block\Widget\TextField"/>
             </parameter>
@@ -28,7 +28,7 @@
             <parameter name="cc_enable_phoneno" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="30">
                 <label translate="true">Show Phone Number Field</label>
                 <description>Show Phone Number field in contact us form</description>
-            </parameter>
-        </parameters> -->
+            </parameter> -->
+        </parameters>
     </widget>
 </widgets>

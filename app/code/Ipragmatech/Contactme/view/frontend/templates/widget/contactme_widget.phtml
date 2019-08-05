@@ -11,6 +11,8 @@
  */
 //$widgetEnable = $this->getConfigValue('contactwidget_section/general/enable');
 $formActionUrl = $this->getFormActionUrl();
+$cityName = $this->getCityName();
+$utmCampaign = $this->getutmCampaign();
 $helper = $this->helper('Ipragmatech\Contactme\Helper\Data');
 $currPageUrl = $helper->getCurrentUrls();
 ?>
@@ -124,6 +126,8 @@ button.action.submit.primary.contact-me-btn {
             <!-- <label class="label" for="name"><span><?php /* @escapeNotVerified */ echo __('Name') ?></span></label> -->
             <div class="control">
                 <input placeholder="Full Name*"name="name" id="name" title="<?php /* @escapeNotVerified */ echo __('Name') ?>" required class="input-text" type="text" data-validate="{required:true}"/>
+                <input name="city_name" id="city_name"  required class="input-text" type="hidden" value="<?php echo $cityName; ?>"/>
+                <input name="utm_campaign" id="utm_campaign"  required class="input-text" type="hidden" value="<?php echo $utmCampaign; ?>"/>
             </div>
         </div>
         <div class="field email required">
@@ -176,7 +180,7 @@ button.action.submit.primary.contact-me-btn {
     </fieldset>
     <div class="submit-button-wrapper">
         <input type="hidden" name="currUrl" id="currUrl" value="<?php echo $currPageUrl; ?>" />
-        <button type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class=" submit btn contact-me-btn">
+        <button type="submit"  onclick="this.disabled=true;this.innerText='Sending, please wait...';this.form.submit();"  title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class=" submit btn contact-me-btn">
             <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
         </button>
     </div>

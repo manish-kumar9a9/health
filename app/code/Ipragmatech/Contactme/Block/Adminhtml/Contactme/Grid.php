@@ -195,6 +195,14 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
 		$this->addColumn(
+            'city_name',
+            [
+                'header' => __('City'),
+                'index' => 'city_name',
+                'class' => 'city_name'
+            ]
+        );
+		$this->addColumn(
             'query',
             [
                 'header' => __('Query'),

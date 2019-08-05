@@ -33,6 +33,14 @@ implements \Magento\Widget\Block\BlockInterface
         return $this->getUrl('contactme/index/save');
     }
 
+    public function getCityName()
+    {
+        if (!$this->hasData('city_name')) {
+            return 'New Delhi';
+        }
+        return $this->getData('city_name');
+    }
+
     /**
      * Get config value
      */
@@ -42,6 +50,13 @@ implements \Magento\Widget\Block\BlockInterface
                         $value,
                         \Magento\Store\Model\ScopeInterface::SCOPE_STORE
                         );
+    }
+
+    public function utmCampaign(){
+      if (!$this->hasData('utm_campaign')) {
+          return 'daasdasdas';
+      }
+      return $this->getData('utm_campaign');
     }
 
 }

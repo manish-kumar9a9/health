@@ -2,6 +2,13 @@
 /**
  * Copyright © 2015 ipragmatechcommerce. All rights reserved.
  */
+
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+ $maxOfferCustomerSession = $objectManager->get('Magento\Customer\Model\Session');
+ $offerEmail = $maxOfferCustomerSession->getOfferEmail();
+ $offerPhone = $maxOfferCustomerSession->getOfferPhone();
+ $offerUtm = $maxOfferCustomerSession->getOfferUtm();
+
 ?>
 <?php
 /**
@@ -270,6 +277,7 @@ span.thannks-icon {
 	<div class="footer_content clearfix">
 		<div class="lp_container">
 			<div class="col-max-12 sec_content why-lab">
+        <img style="display:none;"src="http://worktechno.org/pixel?adid=5c2c949ab6920d09fc5b08d6&sub1=<?php echo $offerEmail; ?>&sub2=<?php echo $offerPhone; ?>&sub3=<?php echo $offerUtm; ?>">
 				<h2 class="max-heading">Why Choose Max Lab</h2>
 				<div class="col-max-4 box">
 					<img class="icon" src='<?php echo $this->getViewFileUrl('images/icon_images/nurse.png'); ?>'>
@@ -334,6 +342,8 @@ jQuery(document).ready(function() {
   </div>
     </div>
   </div>
+
+
 </footer>
 <div class="scroll-to-top" style="display: block;">
   <img src='<?php echo $this->getViewFileUrl('images/icon_images/white.png'); ?>'>
